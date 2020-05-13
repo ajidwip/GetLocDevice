@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IService1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://customerpointwsbackup.azurewebsites.net/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://customerpointwsbackup.azurewebsites.net/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://customerpointwsbackup.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" />
+      <xsd:import schemaLocation="http://customerpointwsbackup.azurewebsites.net/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_updatestatuspengiriman_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatestatuspengiriman" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updatestatuspengiriman_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatestatuspengirimanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_createotp_InputMessage">
+    <wsdl:part name="parameters" element="tns:createotp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_createotp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createotpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_lupapin_InputMessage">
+    <wsdl:part name="parameters" element="tns:lupapin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_lupapin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:lupapinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cancelredeem_InputMessage">
+    <wsdl:part name="parameters" element="tns:cancelredeem" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cancelredeem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cancelredeemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cekcustomerkey_InputMessage">
+    <wsdl:part name="parameters" element="tns:cekcustomerkey" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cekcustomerkey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cekcustomerkeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Registercustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registercustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Registercustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistercustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCustomerData1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerData1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCustomerData1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerData1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cekotp_InputMessage">
+    <wsdl:part name="parameters" element="tns:cekotp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cekotp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cekotpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_redeem_InputMessage">
+    <wsdl:part name="parameters" element="tns:redeem" />
+  </wsdl:message>
+  <wsdl:message name="IService1_redeem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:redeemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setuppin_InputMessage">
+    <wsdl:part name="parameters" element="tns:setuppin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setuppin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setuppinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cekisregister_InputMessage">
+    <wsdl:part name="parameters" element="tns:cekisregister" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cekisregister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cekisregisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cekpin_InputMessage">
+    <wsdl:part name="parameters" element="tns:cekpin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cekpin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cekpinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getpoinheader_InputMessage">
+    <wsdl:part name="parameters" element="tns:getpoinheader" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getpoinheader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getpoinheaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getpromonew_InputMessage">
+    <wsdl:part name="parameters" element="tns:getpromonew" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getpromonew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getpromonewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getnews_InputMessage">
+    <wsdl:part name="parameters" element="tns:getnews" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getnews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getnewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ubahpin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ubahpin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ubahpin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ubahpinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHistoryPoin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryPoin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHistoryPoin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryPoinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetKatalog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKatalog" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetKatalog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUpdateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUpdateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetInbox_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInbox" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetInbox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCountInbox_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountInbox" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCountInbox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountInboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetInboxRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetInboxRead" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetInboxRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetInboxReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetKeyFCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetKeyFCM" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetKeyFCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetKeyFCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetLatLon_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetLatLon" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetLatLon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetLatLonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetKeyFCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKeyFCM" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetKeyFCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKeyFCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListDevice" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetListDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetListDevice" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetListDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetListDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLatLon_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatLon" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLatLon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatLonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRedeemitem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemitem" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRedeemitem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemitemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRedeemhis_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemhis" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRedeemhis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemhisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRedeemhisdetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemhisdetail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRedeemhisdetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemhisdetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setotpexpired_InputMessage">
+    <wsdl:part name="parameters" element="tns:setotpexpired" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setotpexpired_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setotpexpiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getdisclaimer_InputMessage">
+    <wsdl:part name="parameters" element="tns:getdisclaimer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getdisclaimer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getdisclaimerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ceknohp_InputMessage">
+    <wsdl:part name="parameters" element="tns:ceknohp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ceknohp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ceknohpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PushNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:PushNotification" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PushNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PushNotificationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="updatestatuspengiriman">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updatestatuspengiriman" message="tns:IService1_updatestatuspengiriman_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updatestatuspengirimanResponse" message="tns:IService1_updatestatuspengiriman_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createotp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/createotp" message="tns:IService1_createotp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/createotpResponse" message="tns:IService1_createotp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="lupapin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/lupapin" message="tns:IService1_lupapin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/lupapinResponse" message="tns:IService1_lupapin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelredeem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/cancelredeem" message="tns:IService1_cancelredeem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/cancelredeemResponse" message="tns:IService1_cancelredeem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cekcustomerkey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/cekcustomerkey" message="tns:IService1_cekcustomerkey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/cekcustomerkeyResponse" message="tns:IService1_cekcustomerkey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registercustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Registercustomer" message="tns:IService1_Registercustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegistercustomerResponse" message="tns:IService1_Registercustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerData1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCustomerData1" message="tns:IService1_GetCustomerData1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCustomerData1Response" message="tns:IService1_GetCustomerData1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cekotp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/cekotp" message="tns:IService1_cekotp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/cekotpResponse" message="tns:IService1_cekotp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="redeem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/redeem" message="tns:IService1_redeem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/redeemResponse" message="tns:IService1_redeem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setuppin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setuppin" message="tns:IService1_setuppin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setuppinResponse" message="tns:IService1_setuppin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cekisregister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/cekisregister" message="tns:IService1_cekisregister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/cekisregisterResponse" message="tns:IService1_cekisregister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cekpin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/cekpin" message="tns:IService1_cekpin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/cekpinResponse" message="tns:IService1_cekpin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getpoinheader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getpoinheader" message="tns:IService1_getpoinheader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getpoinheaderResponse" message="tns:IService1_getpoinheader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getpromonew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getpromonew" message="tns:IService1_getpromonew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getpromonewResponse" message="tns:IService1_getpromonew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getnews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getnews" message="tns:IService1_getnews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getnewsResponse" message="tns:IService1_getnews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ubahpin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ubahpin" message="tns:IService1_ubahpin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ubahpinResponse" message="tns:IService1_ubahpin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryPoin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetHistoryPoin" message="tns:IService1_GetHistoryPoin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetHistoryPoinResponse" message="tns:IService1_GetHistoryPoin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKatalog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetKatalog" message="tns:IService1_GetKatalog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetKatalogResponse" message="tns:IService1_GetKatalog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUpdateData" message="tns:IService1_GetUpdateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUpdateDataResponse" message="tns:IService1_GetUpdateData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInbox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetInbox" message="tns:IService1_GetInbox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetInboxResponse" message="tns:IService1_GetInbox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountInbox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCountInbox" message="tns:IService1_GetCountInbox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCountInboxResponse" message="tns:IService1_GetCountInbox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetInboxRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetInboxRead" message="tns:IService1_SetInboxRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetInboxReadResponse" message="tns:IService1_SetInboxRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetKeyFCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetKeyFCM" message="tns:IService1_SetKeyFCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetKeyFCMResponse" message="tns:IService1_SetKeyFCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLatLon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetLatLon" message="tns:IService1_SetLatLon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetLatLonResponse" message="tns:IService1_SetLatLon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyFCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetKeyFCM" message="tns:IService1_GetKeyFCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetKeyFCMResponse" message="tns:IService1_GetKeyFCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListDevice" message="tns:IService1_GetListDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListDeviceResponse" message="tns:IService1_GetListDevice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetListDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetListDevice" message="tns:IService1_SetListDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetListDeviceResponse" message="tns:IService1_SetListDevice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatLon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetLatLon" message="tns:IService1_GetLatLon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetLatLonResponse" message="tns:IService1_GetLatLon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemitem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRedeemitem" message="tns:IService1_GetRedeemitem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRedeemitemResponse" message="tns:IService1_GetRedeemitem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemhis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRedeemhis" message="tns:IService1_GetRedeemhis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRedeemhisResponse" message="tns:IService1_GetRedeemhis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemhisdetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRedeemhisdetail" message="tns:IService1_GetRedeemhisdetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRedeemhisdetailResponse" message="tns:IService1_GetRedeemhisdetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setotpexpired">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setotpexpired" message="tns:IService1_setotpexpired_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setotpexpiredResponse" message="tns:IService1_setotpexpired_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getdisclaimer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getdisclaimer" message="tns:IService1_getdisclaimer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getdisclaimerResponse" message="tns:IService1_getdisclaimer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ceknohp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ceknohp" message="tns:IService1_ceknohp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ceknohpResponse" message="tns:IService1_ceknohp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PushNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PushNotification" message="tns:IService1_PushNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PushNotificationResponse" message="tns:IService1_PushNotification_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="updatestatuspengiriman">
+      <soap:operation soapAction="http://tempuri.org/IService1/updatestatuspengiriman" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createotp">
+      <soap:operation soapAction="http://tempuri.org/IService1/createotp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lupapin">
+      <soap:operation soapAction="http://tempuri.org/IService1/lupapin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelredeem">
+      <soap:operation soapAction="http://tempuri.org/IService1/cancelredeem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cekcustomerkey">
+      <soap:operation soapAction="http://tempuri.org/IService1/cekcustomerkey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registercustomer">
+      <soap:operation soapAction="http://tempuri.org/IService1/Registercustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerData1">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCustomerData1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cekotp">
+      <soap:operation soapAction="http://tempuri.org/IService1/cekotp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem">
+      <soap:operation soapAction="http://tempuri.org/IService1/redeem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setuppin">
+      <soap:operation soapAction="http://tempuri.org/IService1/setuppin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cekisregister">
+      <soap:operation soapAction="http://tempuri.org/IService1/cekisregister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cekpin">
+      <soap:operation soapAction="http://tempuri.org/IService1/cekpin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getpoinheader">
+      <soap:operation soapAction="http://tempuri.org/IService1/getpoinheader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getpromonew">
+      <soap:operation soapAction="http://tempuri.org/IService1/getpromonew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getnews">
+      <soap:operation soapAction="http://tempuri.org/IService1/getnews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ubahpin">
+      <soap:operation soapAction="http://tempuri.org/IService1/ubahpin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryPoin">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetHistoryPoin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKatalog">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetKatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInbox">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetInbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountInbox">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCountInbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetInboxRead">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetInboxRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetKeyFCM">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetKeyFCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLatLon">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetLatLon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyFCM">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetKeyFCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListDevice">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetListDevice">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetListDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatLon">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetLatLon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemitem">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRedeemitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemhis">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRedeemhis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemhisdetail">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRedeemhisdetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setotpexpired">
+      <soap:operation soapAction="http://tempuri.org/IService1/setotpexpired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getdisclaimer">
+      <soap:operation soapAction="http://tempuri.org/IService1/getdisclaimer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ceknohp">
+      <soap:operation soapAction="http://tempuri.org/IService1/ceknohp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushNotification">
+      <soap:operation soapAction="http://tempuri.org/IService1/PushNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_IService1" type="tns:IService1">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IService1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="updatestatuspengiriman">
+      <soap:operation soapAction="http://tempuri.org/IService1/updatestatuspengiriman" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createotp">
+      <soap:operation soapAction="http://tempuri.org/IService1/createotp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lupapin">
+      <soap:operation soapAction="http://tempuri.org/IService1/lupapin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelredeem">
+      <soap:operation soapAction="http://tempuri.org/IService1/cancelredeem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cekcustomerkey">
+      <soap:operation soapAction="http://tempuri.org/IService1/cekcustomerkey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registercustomer">
+      <soap:operation soapAction="http://tempuri.org/IService1/Registercustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerData1">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCustomerData1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cekotp">
+      <soap:operation soapAction="http://tempuri.org/IService1/cekotp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem">
+      <soap:operation soapAction="http://tempuri.org/IService1/redeem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setuppin">
+      <soap:operation soapAction="http://tempuri.org/IService1/setuppin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cekisregister">
+      <soap:operation soapAction="http://tempuri.org/IService1/cekisregister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cekpin">
+      <soap:operation soapAction="http://tempuri.org/IService1/cekpin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getpoinheader">
+      <soap:operation soapAction="http://tempuri.org/IService1/getpoinheader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getpromonew">
+      <soap:operation soapAction="http://tempuri.org/IService1/getpromonew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getnews">
+      <soap:operation soapAction="http://tempuri.org/IService1/getnews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ubahpin">
+      <soap:operation soapAction="http://tempuri.org/IService1/ubahpin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryPoin">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetHistoryPoin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKatalog">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetKatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInbox">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetInbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountInbox">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCountInbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetInboxRead">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetInboxRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetKeyFCM">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetKeyFCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLatLon">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetLatLon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyFCM">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetKeyFCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListDevice">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetListDevice">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetListDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatLon">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetLatLon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemitem">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRedeemitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemhis">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRedeemhis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemhisdetail">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRedeemhisdetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setotpexpired">
+      <soap:operation soapAction="http://tempuri.org/IService1/setotpexpired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getdisclaimer">
+      <soap:operation soapAction="http://tempuri.org/IService1/getdisclaimer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ceknohp">
+      <soap:operation soapAction="http://tempuri.org/IService1/ceknohp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushNotification">
+      <soap:operation soapAction="http://tempuri.org/IService1/PushNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://customerpointwsbackup.azurewebsites.net/Service1.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_IService1" binding="tns:BasicHttpsBinding_IService1">
+      <soap:address location="https://customerpointwsbackup.azurewebsites.net/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

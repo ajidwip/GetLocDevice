@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://customerpointwsbackup.azurewebsites.net/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" />
+  <xs:element name="updatestatuspengiriman">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="redeemnumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatestatuspengirimanResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createotp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nohp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createotpResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lupapin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nohp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="otp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pinbaru" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lupapinResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelredeem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="redeemnumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelredeemResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cekcustomerkey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cekcustomerkeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="cekcustomerkeyResult" nillable="true" type="q1:cekcustomerkey" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Registercustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nama" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nohp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="noktp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="kodepos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="alamat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="npwp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="notelptoko" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customerkey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="flag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="jenisusaha" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistercustomerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerData1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerData1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetCustomerData1Result" nillable="true" type="q2:GetCustomerData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cekotp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="otp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cekotpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="cekotpResult" nillable="true" type="q3:cekotp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="redeem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requestID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LineNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RedeemItemCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RedeemQTY" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="redeemResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setuppin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Masterkey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setuppinResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cekisregister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cekisregisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="cekisregisterResult" nillable="true" type="q4:cekisreg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cekpin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cekpinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="cekpinResult" nillable="true" type="q5:cekpin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getpoinheader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getpoinheaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="getpoinheaderResult" nillable="true" type="q6:getpoinheader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getpromonew">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getpromonewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="getpromonewResult" nillable="true" type="q7:Promo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getnews">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getnewsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="getnewsResult" nillable="true" type="q8:news" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ubahpin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oldpin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newpin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="masterkey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ubahpinResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoryPoin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoryPoinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetHistoryPoinResult" nillable="true" type="q9:HistoryPoin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKatalog">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKatalogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetKatalogResult" nillable="true" type="q10:Katalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpdateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addtime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tablename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpdateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetUpdateDataResult" nillable="true" type="q11:UpdateData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInbox">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInboxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetInboxResult" nillable="true" type="q12:Inbox" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountInbox">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountInboxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetCountInboxResult" nillable="true" type="q13:CountInbox" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetInboxRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InboxID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetInboxReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="SetInboxReadResult" nillable="true" type="q14:SetInbox" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetKeyFCM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetKeyFCMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="SetKeyFCMResult" nillable="true" type="q15:KeyFCM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLatLon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deviceid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lon" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLatLonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="SetLatLonResult" nillable="true" type="q16:LatLon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKeyFCM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masterkey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKeyFCMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetKeyFCMResult" nillable="true" type="q17:TB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deviceid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListDeviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetListDeviceResult" nillable="true" type="q18:TB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetListDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deviceid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parentid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetListDeviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="SetListDeviceResult" nillable="true" type="q19:TB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatLon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masterkey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatLonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetLatLonResult" nillable="true" type="q20:TB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRedeemitem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dimensi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRedeemitemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetRedeemitemResult" nillable="true" type="q21:redeemitem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRedeemhis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRedeemhisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetRedeemhisResult" nillable="true" type="q22:redeemhis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRedeemhisdetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MasterKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="redeemnumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRedeemhisdetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="GetRedeemhisdetailResult" nillable="true" type="q23:redeemhisdetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setotpexpired">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nohp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setotpexpiredResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getdisclaimer">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getdisclaimerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="getdisclaimerResult" nillable="true" type="q24:disclaimer1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ceknohp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nohp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ceknohpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WcfCustomerPoint" minOccurs="0" name="ceknohpResult" nillable="true" type="q25:ceknohp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PushNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="senderid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DeviceToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="titlemsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PushNotificationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

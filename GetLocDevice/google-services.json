@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "142528132177",
+    "firebase_url": "https://getlocation-d2e37.firebaseio.com",
+    "project_id": "getlocation-d2e37",
+    "storage_bucket": "getlocation-d2e37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142528132177:android:682efa56fda1a606853470",
+        "android_client_info": {
+          "package_name": "com.android.getlocdevice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142528132177-2ilvjqkcmpgduf90h29161pskijgpkdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTAZPj-ljXWc9Ucu4EXrM5Sgvm6yvCtcE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142528132177-2ilvjqkcmpgduf90h29161pskijgpkdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
